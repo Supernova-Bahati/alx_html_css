@@ -1,95 +1,202 @@
-/* Reset some defaults */
+/* Basic reset and layout */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    /* Default text color */
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #111;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
-header {
-    background-color: #fff;
-    /* From Figma */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    justify-content: space-between;
 }
 
-header nav a {
+.nav-links a {
+    margin-left: 18px;
     text-decoration: none;
-    color: #000;
-    /* From Figma */
-    margin-left: 20px;
+    color: #333;
 }
 
 .banner {
-    background-image: url('path-to-banner.jpg');
-    height: 600px;
-    /* Adjust per Figma */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 24px;
+    padding: 40px 0;
+    align-items: flex-start;
+}
+
+.banner-left {
+    flex: 1;
+}
+
+.banner-left h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.banner-left p {
+    margin-bottom: 16px;
+}
+
+.cta {
+    padding: 10px 18px;
+    border: none;
+    background: #0077ff;
     color: #fff;
-}
-.quote {
-    font-style: italic;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 40px auto;
-    width: 60%;
-    color: #555; /* Figma reference */
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.videos {
+.banner-right {
+    width: 380px;
+}
+
+.highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
-.video-item {
-    border: 1px solid #ddd;
+.highlight img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.highlight h3 {
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.highlight p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.quote {
+    background: #f9f9f9;
+    padding: 36px 0;
+    margin-top: 24px;
+}
+
+.quote-inner {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.quote-inner img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 8px;
-    overflow: hidden;
-}
-.membership {
-    background-color: #f7f7f7;
-    padding: 50px;
-    text-align: center;
 }
 
-.membership h2 {
-    margin-bottom: 20px;
+blockquote {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.videos .video-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.video-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.video-author {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.video-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.membership .plans {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.plan img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.plan button {
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .faq {
-    padding: 50px;
-    max-width: 800px;
-    margin: auto;
+    margin-top: 24px;
+}
+
+.faq-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .faq-item {
-    margin-bottom: 20px;
+    flex: 1;
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.faq-item h3 {
-    cursor: pointer;
+.site-footer {
+    border-top: 1px solid #e6e6e6;
+    padding: 24px 0;
+    margin-top: 24px;
 }
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 30px 50px;
-    text-align: center;
+
+.footer-inner {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 8px;
 }
