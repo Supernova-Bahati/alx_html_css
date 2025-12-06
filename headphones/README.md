@@ -1,11 +1,3 @@
-Understood.
-Here is **ONLY the content you should paste into your README.md** — nothing extra.
-
----
-
-# ⭐ **PASTE THIS INTO README.md**
-
-```markdown
 # Headphones Landing Page
 
 This project is part of the **ALX Front-End Specialization**, where the objective is to build a complete webpage from scratch based on a Figma design by **Nicolas Philippot (UI/UX Designer)**.  
